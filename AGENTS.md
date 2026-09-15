@@ -149,6 +149,15 @@ Agent 不得自行添加未要求的：
 
 Master 负责向用户呈现待审批产物与反馈；Producer 负责记录批准/退回的具体版本并控制下游解锁。
 
-## 11. 最终原则
+## 11. 多游戏仓库边界
 
-这个项目不是 Agent 群聊系统，而是一个由 Master 负责编排与用户沟通、Producer 负责流程监督与审批门禁、专业 Agent 基于固定 Artifact 协作的虚拟手游开发流水线。
+本组织用于开发多款游戏，必须遵守 `governance/REPOSITORY_SYNC_POLICY.md`：
+- `YuanQuan/ai-studio-template` 只保存可跨游戏复用的 Studio Layer：`AGENTS.md`、`agents/`、`rules/`、`schemas/`、`governance/` 和空白项目模板。
+- `STUDIO.md`、`project/`、`tasks/`、`deliverables/`、`client/`、`server/`、`tests/` 以及具体游戏需求、资产、代码、技术选型、任务状态和审批历史属于 Project Layer，只进入对应游戏仓库。
+- 新游戏创建时复制模板仓库最新已确认的 Studio Layer，并用 `.studio-lock.json` 锁定来源 commit。
+- Studio 规则更新不得自动改变正在开发中的游戏；已有游戏只有在用户明确要求同步后，经过差异 Review 才能升级 Studio Layer。
+- 单项目经验只有在用户明确确认升级为组织级规则后，才能回写 `ai-studio-template`。
+
+## 12. 最终原则
+
+这个项目不是 Agent 群聊系统，而是一个由 Master 负责编排与用户沟通、Producer 负责流程监督与审批门禁、专业 Agent 基于固定 Artifact 协作的虚拟手游开发流水线。Studio 组织能力与具体游戏项目事实必须保持仓库级隔离。
