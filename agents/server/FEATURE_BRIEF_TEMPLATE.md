@@ -15,17 +15,17 @@
 - 是否存在重复实现风险。
 
 ## 4. Proposed Design
-- 涉及的 NestJS Module / Service / Repository。
+- 涉及的当前项目 Module / Service / Repository / Runtime Component。
 - 关键调用链与职责边界。
-- 是否影响 Global / Zone 边界。
+- 是否影响当前项目已定义的服务/数据域边界。
 
 ## 5. Data & Cache
-- MySQL 表/字段/索引变化。
-- Redis Key / TTL / 缓存策略变化。
+- 当前项目持久化模型/表/字段/索引变化。
+- 缓存 Key / TTL / 在线态策略变化。
 - 一致性与失败恢复方式。
 
-## 6. Protocol
-- 新增/修改的 Protobuf message / message id。
+## 6. Protocol / API
+- 新增/修改的当前项目 API / message / schema。
 - 兼容性、幂等、超时与重试语义。
 
 ## 7. Risk
@@ -39,4 +39,4 @@
 ## Writing Rule
 - 默认控制在能说明关键设计的最短篇幅。
 - 小需求可删除不适用章节。
-- 不复制已有 ARCHITECTURE / API_SPEC；用引用代替重复描述。
+- 不复制已有 Architecture / API Spec；用引用代替重复描述。
