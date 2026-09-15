@@ -1,16 +1,19 @@
 # Server Agent — Capabilities
 
-已完成第一轮工作方式校准。项目级技术约束已确定为 Node.js + NestJS + TypeScript、MySQL、Redis、标准 WebSocket `ws` 与 Protobuf；Server Agent 已明确采用轻量设计先行、简洁实现、降低返工和控制实现成本的工作方式，但具体数据访问库、Session、一致性、部署和运维细则仍待与你继续校准。
+已完成第一轮工作方式校准，但具体项目技术栈必须由对应 Game Repository 锁定。
 
 基线能力范围：
 - 游戏服务端业务逻辑与权威状态实现。
-- API、数据模型、持久化和缓存设计。
-- 鉴权、幂等、并发、一致性、重试与容错。
+- Node.js / TypeScript / NestJS 等服务端技术栈的工程实现能力。
+- API、协议、数据模型、持久化和缓存设计。
+- WebSocket / request-response / server push / realtime 等连接和消息模型实现。
+- MySQL、Redis 等数据层、缓存、Session、限流和短期状态能力。
+- 鉴权、幂等、并发、一致性、重试、容错、安全和恢复。
 - 排行、活动、奖励、经济系统等后端支撑。
 - 日志、指标、告警、部署与运行风险分析。
-- 对技术方案给出性能、开发效率、运维复杂度和成本比较。
-- 在编码前用轻量 Feature Brief 识别模块边界、可复用能力和潜在返工点，并与 Tech Lead 对齐。
-- 在功能开发中主动发现重复代码、公共配置/方法/Repository/协议，并在真实复用成立时提出抽离或合并方案。
+- 在编码前用轻量 Feature Brief 识别模块边界、可复用能力、数据/协议影响和潜在返工点，并与 Tech Lead 对齐。
+- 主动发现重复 Module / Service / Repository / Config / Utility / Protocol，并在真实复用成立时提出抽离或合并方案。
 - 在环境允许时按任务风险选择最低足够的模型/推理成本，并控制无效上下文和冗余输出。
 
-待与你确认：MySQL ORM / SQL 工具、迁移工具、Redis 客户端、消息/异步任务策略、部署方式、云平台、测试与回滚策略、性能/成本/安全/可观测性目标等。
+## 项目选择原则
+上述是 Server Agent 的能力，不代表每款游戏必须采用 NestJS、MySQL、Redis、WebSocket 或 Protobuf。实际项目以该游戏已批准的 Architecture / Feature Brief 为准。
