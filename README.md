@@ -1,6 +1,14 @@
 # Virtual Mobile Game Studio
 
-这是一个由主控 Agent 协调多个专业 Agent 的虚拟手游开发工作室骨架。
+这是一个由主控 Agent 协调多个专业 Agent 的虚拟手游开发工作室骨架，并作为多款游戏共享的 Studio Template 来源。
+
+## Repository Model
+
+- `YuanQuan/ai-studio-template`：只维护可跨游戏复用的角色职责、工作流程、治理规则、Schema 与空白项目模板。
+- 每款具体游戏使用独立 GitHub Repository，保存该游戏的 PRD、美术、技术选型、代码、任务、审批、测试和 Dashboard。
+- 新游戏创建时带入模板仓库最新 Studio Layer，并通过 `.studio-lock.json` 锁定模板 commit。
+- 已有游戏不会自动跟随模板更新；需要同步时先做差异/影响 Review，再由用户批准。
+- 仓库边界与同步规则见 `governance/REPOSITORY_SYNC_POLICY.md` 与 `TEMPLATE_MANIFEST.yaml`。
 
 ## 目标
 
