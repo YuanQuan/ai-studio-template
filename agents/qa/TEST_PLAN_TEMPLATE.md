@@ -7,7 +7,8 @@
 - Tech Design / Client / Server Feature Brief references:
 
 ## Scope
-### Client / Web
+### Client / Target Platform
+- Target platform / environment:
 - Functional areas to test:
 - UI states to test:
 - Visual checkpoints:
@@ -18,7 +19,7 @@
 
 ## Out of Scope by Default
 Unless explicitly requested by the user/task:
-- WeChat / Douyin platform testing
+- Any platform/environment not listed in Scope
 - Network / weak-network / reconnect testing
 - Performance / memory / load testing
 - Broad regression testing outside the changed feature
@@ -29,7 +30,7 @@ Unless explicitly requested by the user/task:
 - Visual checkpoints/evidence where applicable
 
 ## Visual QA Plan
-- Fixed Web viewport / resolution:
+- Fixed target viewport / resolution / device profile:
 - Required UI states:
 - Reference artifact paths:
 - Screenshot checkpoints:
