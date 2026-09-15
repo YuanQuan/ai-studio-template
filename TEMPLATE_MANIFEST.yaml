@@ -1,0 +1,42 @@
+version: 1
+repository: YuanQuan/ai-studio-template
+purpose: reusable_studio_template
+
+studio_layer:
+  syncable:
+    - AGENTS.md
+    - agents/**
+    - rules/**
+    - schemas/**
+    - governance/**
+  template_only:
+    - README.md
+    - TEMPLATE_MANIFEST.yaml
+    - docs/**
+    - templates/game/**
+
+project_layer:
+  never_publish_to_template:
+    - STUDIO.md
+    - project/**
+    - tasks/**
+    - deliverables/**
+    - client/**
+    - server/**
+    - tests/**
+    - assets/**
+    - packages/**
+    - apps/**
+    - tooling/**
+
+bootstrap:
+  project_template_root: templates/game
+  lock_file: .studio-lock.json
+  source_branch: main
+  mode: pinned
+
+sync_policy:
+  auto_sync_existing_games: false
+  user_approval_required: true
+  project_layer_overwrite_allowed: false
+  impact_review_required: true
