@@ -80,14 +80,14 @@ Tech Lead 负责公共配置的结构、字段类型、ID/引用、约束、校�
 
 ### QA Agent
 正式功能按适用范围交付：
-- 正式编码前先提交 `TEST_PLAN.md`，与相关 Client/Server `FEATURE_BRIEF.md` 组成开发开工包并一起通过用户审批；其中明确未来 Client/Web、Server、Visual QA 范围、证据要求和显式不测试项。
-- `CLIENT_TEST_CASES.md`：Client/Web 用例，必须可追溯到已批准 PRD/Acceptance；UI/VFX 相关用例同时引用批准视觉 Artifact。
+- 正式编码前先提交 `TEST_PLAN.md`，与相关 Client/Server `FEATURE_BRIEF.md` 组成开发开工包并一起通过用户审批；其中明确未来 Client、Server、Visual QA、目标平台/环境、证据要求和显式不测试项。
+- `CLIENT_TEST_CASES.md`：客户端用例，必须可追溯到已批准 PRD/Acceptance；UI/VFX 相关用例同时引用批准视觉 Artifact。
 - `SERVER_TEST_CASES.md`：Server 用例，覆盖任务涉及的协议/接口、业务规则、状态和必要持久化结果。
-- Visual QA 证据：固定 Web 环境的截图、差异图、VFX 关键帧/短录屏和相应专业 Review 结论，遵守 `agents/qa/VISUAL_QA_GUIDE.md`。
-- `TEST_REPORT.md`：执行结果、Web 环境、通过/失败/阻塞统计、P0/P1/P2 缺陷、明确未测试范围和质量结论。
+- Visual QA 证据：固定目标测试环境的截图、差异图、VFX 关键帧/短录屏和相应专业 Review 结论，遵守 `agents/qa/VISUAL_QA_GUIDE.md`。
+- `TEST_REPORT.md`：执行结果、测试平台/环境、通过/失败/阻塞统计、P0/P1/P2 缺陷、明确未测试范围和质量结论。
 - `bug_reports/`：每个正式缺陷包含复现步骤、期望/实际、环境、P0/P1/P2、证据和验证结果。
-- 大批量测试用例可另外使用 `.xlsx`，但必须保留 Task/需求可追溯字段。
-- 当前默认不测试微信/抖音、网络/弱网、性能和广泛回归；只有用户/Task 明确要求时才纳入正式测试范围。
+- 大批量用例可另外使用 `.xlsx`，但必须保留 Task/需求可追溯字段。
+- 平台、网络/弱网、性能和广泛回归是否纳入测试由当前 Game Repository / Task 明确；QA 不得自行扩大范围，未测试项必须在 TEST_PLAN / TEST_REPORT 中明确。
 
 ### Master Agent
 正式复合任务至少维护：
