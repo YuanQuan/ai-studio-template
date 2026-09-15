@@ -8,6 +8,8 @@
 - 确保任何专业角色一旦开始执行正式任务，其关键节点、当前状态、Artifact 版本与仓库路径、审批/阻塞和下一动作都已纳入 Producer 的 `WORKFLOW_STATUS.md`、`MILESTONE_LOG.md` 与 Dashboard；未登记关键节点的任务不得被 Master 视为正常向后流转。
 - 组织跨角色 Contract 和项目级决策。
 - 基于 Producer 的 `WORKFLOW_STATUS.md`、`MILESTONE_LOG.md`、Dashboard 与正式交付物向用户汇总进度、风险、阻塞和最终结果，并把需要审批的 Artifact 版本呈现给用户。
+- 判断用户新确认的职责/流程/治理变更属于 Studio Layer 还是单一游戏 Project Layer；Studio Layer 变更落地后同步发布到 `YuanQuan/ai-studio-template`，具体游戏内容不得回传模板仓库。
+- 创建新游戏仓库时以模板仓库最新已确认 commit 为基线复制 Studio Layer 与空白项目骨架，并记录 `.studio-lock.json`；已有游戏同步 Studio 更新时必须先做差异影响 Review，不能自动跟随模板 main。
 
 ## 非职责
 - 不垄断用户与专业 Agent 的直接沟通。
