@@ -36,15 +36,17 @@
 - `tests/`
 - 具体游戏资产、配置、源代码、PRD、研究、技术决策、测试报告和审批历史
 
-模板仓库可以在 `templates/game/` 提供这些文件的空白模板，但不能保存任何具体游戏已经填写的内容。
+模板仓库在 `templates/game/` 提供标准小游戏 Project Template。它可以保存明确标注为“模板默认值”的小游戏技术基线、空白文档结构、Dashboard、QA 默认范围与目录初始化清单，但不能保存任何具体游戏已经填写的玩法、数值、视觉、任务、审批、Bug、资产或项目决策历史。
+
+当前默认模板 ID 为 `standard-mini-game`，目标为本地 Web 开发/调试 + 微信小游戏 + 抖音小游戏发布；默认技术基线见 `templates/game/STUDIO.md` 与 `templates/game/PROJECT_TEMPLATE_MANIFEST.yaml`。
 
 ## 2. 新游戏创建
 
-创建一款新游戏时：
+创建一款新小游戏时：
 
 1. 读取 `YuanQuan/ai-studio-template` 的最新 `main` commit。
 2. 将当前 Studio Layer 复制进新 Game Repository。
-3. 将 `templates/game/` 展开为该游戏初始 Project Layer。
+3. 默认使用 `standard-mini-game`，将 `templates/game/` 展开为该游戏初始 Project Layer，并按 `PROJECT_TEMPLATE_MANIFEST.yaml` 创建空目录。
 4. 在游戏仓库根目录写入 `.studio-lock.json`，记录模板来源和精确 commit。
 5. 从此以后该游戏独立演进；模板仓库的后续变化不会自动改变正在开发中的游戏。
 
@@ -53,6 +55,8 @@
 ```json
 {
   "source": "YuanQuan/ai-studio-template",
+  "template": "standard-mini-game",
+  "template_path": "templates/game",
   "commit": "<template-commit-sha>",
   "synced_at": "<ISO-8601>",
   "mode": "pinned"
@@ -94,7 +98,7 @@
 
 允许发布：
 - Studio Layer；
-- `templates/game/` 中的空白项目骨架；
+- `templates/game/` 中的标准小游戏项目骨架、模板默认技术基线、空状态 Dashboard/日志、目录初始化清单；
 - `docs/` 中的组织/流程说明。
 
 禁止发布：

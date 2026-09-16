@@ -31,6 +31,9 @@ project_layer:
 
 bootstrap:
   project_template_root: templates/game
+  project_template_manifest: templates/game/PROJECT_TEMPLATE_MANIFEST.yaml
+  project_template_id: standard-mini-game
+  project_type: mini_game
   lock_file: .studio-lock.json
   source_branch: main
   mode: pinned

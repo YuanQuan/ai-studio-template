@@ -1,5 +1,7 @@
 {
   "source": "YuanQuan/ai-studio-template",
+  "template": "standard-mini-game",
+  "template_path": "templates/game",
   "commit": "<template-commit-sha>",
   "synced_at": "<ISO-8601>",
   "mode": "pinned"

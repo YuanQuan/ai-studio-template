@@ -86,7 +86,7 @@ Tech Lead 负责公共配置的结构、字段类型、ID/引用、约束、校�
 - Visual QA 证据：固定目标测试环境的截图、差异图、VFX 关键帧/短录屏和相应专业 Review 结论，遵守 `agents/qa/VISUAL_QA_GUIDE.md`。
 - `TEST_REPORT.md`：执行结果、测试平台/环境、通过/失败/阻塞统计、P0/P1/P2 缺陷、明确未测试范围和质量结论。
 - `bug_reports/`：每个正式缺陷包含复现步骤、期望/实际、环境、P0/P1/P2、证据和验证结果。
-- 大批量用例可另外使用 `.xlsx`，但必须保留 Task/需求可追溯字段。
+- 大批量测试用例可另外使用 `.xlsx`，但必须保留 Task/需求可追溯字段。
 - 平台、网络/弱网、性能和广泛回归是否纳入测试由当前 Game Repository / Task 明确；QA 不得自行扩大范围，未测试项必须在 TEST_PLAN / TEST_REPORT 中明确。
 
 ### Master Agent

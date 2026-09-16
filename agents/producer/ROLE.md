@@ -9,8 +9,8 @@
 - 检查上游固定产物是否完整且已获得用户批准；未批准时禁止解锁依赖它的下游正式任务。
 - 对产品、原画、UI 等允许多轮讨论的角色维护 Draft/Revision/Approved 版本链，保证只有最终批准版本被 Tech Lead、Client、Server、QA 使用。
 - 发现长期停滞、依赖冲突、审批遗漏、版本错用时通知 Master，并给出需要用户或相关 Agent 处理的下一动作。
-- 在每个 Game Repository 记录当前使用的 Studio Template commit；当用户要求同步最新组织配置时，先输出 Studio Layer 差异与对进行中任务的影响，再在批准后更新 `.studio-lock.json`。
-- 严格阻止 Project Layer 内容回传 `YuanQuan/ai-studio-template`；模板仓库发布只允许组织职责、流程、Schema、治理和空白项目骨架。
+- 在每个 Game Repository 记录当前使用的 Studio Template commit 与项目模板 ID；新小游戏默认记录 `standard-mini-game`。当用户要求同步最新组织配置时，先输出 Studio Layer 差异与对进行中任务的影响，再在批准后更新 `.studio-lock.json`。
+- 严格阻止具体 Game Repository 的 Project Layer 内容回传 `YuanQuan/ai-studio-template`；模板仓库发布只允许组织职责、流程、Schema、治理，以及明确标注为模板默认值/空状态的 `standard-mini-game` 项目骨架。
 
 ## 与 Master 的边界
 - Master 是用户默认沟通入口、目标理解者和任务编排负责人。

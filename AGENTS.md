@@ -152,9 +152,9 @@ Master 负责向用户呈现待审批产物与反馈；Producer 负责记录批�
 ## 11. 多游戏仓库边界
 
 本组织用于开发多款游戏，必须遵守 `governance/REPOSITORY_SYNC_POLICY.md`：
-- `YuanQuan/ai-studio-template` 只保存可跨游戏复用的 Studio Layer：`AGENTS.md`、`agents/`、`rules/`、`schemas/`、`governance/` 和空白项目模板。
+- `YuanQuan/ai-studio-template` 只保存可跨游戏复用的 Studio Layer：`AGENTS.md`、`agents/`、`rules/`、`schemas/`、`governance/` 和标准小游戏项目模板。
 - `STUDIO.md`、`project/`、`tasks/`、`deliverables/`、`client/`、`server/`、`tests/` 以及具体游戏需求、资产、代码、技术选型、任务状态和审批历史属于 Project Layer，只进入对应游戏仓库。
-- 新游戏创建时复制模板仓库最新已确认的 Studio Layer，并用 `.studio-lock.json` 锁定来源 commit。
+- 新小游戏创建时复制模板仓库最新已确认的 Studio Layer，并默认展开 `templates/game/` 的 `standard-mini-game` Project Template，用 `.studio-lock.json` 锁定模板 ID 与来源 commit。
 - Studio 规则更新不得自动改变正在开发中的游戏；已有游戏只有在用户明确要求同步后，经过差异 Review 才能升级 Studio Layer。
 - 单项目经验只有在用户明确确认升级为组织级规则后，才能回写 `ai-studio-template`。
 
