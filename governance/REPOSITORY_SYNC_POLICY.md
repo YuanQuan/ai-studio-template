@@ -63,7 +63,34 @@
 }
 ```
 
-## 3. 已有游戏同步 Studio 更新
+## 3. 推荐本地工作区布局
+
+允许把独立 Game Repository 放在 Studio Template 本地工作目录的子目录中，但 Git 仓库必须保持完全独立。例如：
+
+```text
+ai-studio-template/              # Studio Template Repository
+├── agents/
+├── rules/
+├── governance/
+├── templates/
+└── ai-studio-demo/              # 独立 Game Repository（自身拥有 .git）
+    ├── STUDIO.md
+    ├── project/
+    ├── tasks/
+    ├── deliverables/
+    ├── client/
+    ├── server/
+    └── tests/
+```
+
+工作边界：
+- 角色职责、组织能力、Workflow、Artifact Contract、Schema、标准小游戏模板等 Studio Layer 修改在父目录进行。
+- 具体游戏的 PRD、研究、美术、UI/VFX、技术设计、源码、测试、任务、审批、Dashboard 等 Project Layer 修改只在对应游戏子目录进行。
+- 父仓库必须通过本地 exclude 或等价方式忽略嵌套 Game Repository，禁止把子仓库内容加入 Studio Template commit。
+- 子仓库保留自己的 `origin`、commit history 和 `.studio-lock.json`，不得把父仓库当作其 Git history。
+- Studio Layer 后续升级仍按显式 Sync Review 执行，不能因为目录嵌套而自动继承父目录变化。
+
+## 4. 已有游戏同步 Studio 更新
 
 模板职责/流程发生变化后，不自动推入所有游戏仓库。
 
@@ -80,7 +107,7 @@
 5. 应用后更新 Studio Layer 文件与 `.studio-lock.json`。
 6. Project Layer 永远不因 Studio Sync 被自动覆盖。
 
-## 4. 项目例外与覆盖
+## 5. 项目例外与覆盖
 
 若某一游戏需要不同于 Studio 默认职责/流程的特殊规则，应记录在该游戏自己的项目决策中，而不是修改模板仓库来适配单个游戏。
 
@@ -92,7 +119,7 @@
 
 如果需要把某个项目中验证有效的做法推广给所有未来游戏，先明确它已经从“项目经验”升级为“组织级规则”，再修改 `ai-studio-template`。
 
-## 5. 发布边界
+## 6. 发布边界
 
 向 `YuanQuan/ai-studio-template` 发布时使用白名单原则：
 
@@ -107,7 +134,7 @@
 - 当前任务、进度、Milestone、Approval、Bug、Test Report；
 - 游戏源码、真实资产、运行配置和环境信息。
 
-## 6. Master / Producer 责任
+## 7. Master / Producer 责任
 
 ### Master
 - 判断变更属于 Studio Layer 还是 Project Layer。
@@ -121,7 +148,7 @@
 - 执行 Studio Sync 前检查进行中任务是否受影响，并形成可见变更摘要。
 - Project Layer 内容绝不回传模板仓库。
 
-## 7. 不采用自动实时继承
+## 8. 不采用自动实时继承
 
 默认不使用 Git submodule 或“模板 main 一更新，所有游戏自动跟着更新”的方式。
 

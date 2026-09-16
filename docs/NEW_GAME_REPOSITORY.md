@@ -50,6 +50,17 @@
 8. 第一次 commit 后，后续所有产品、美术、技术、代码、QA 和进度内容只提交到该 Game Repository。
 9. 第一条正式工作从 Product 总纲/模块树开始，再进入 Artifact / User Approval 流程。
 
+## 推荐本地目录布局
+
+可以把 Game Repository 克隆到 Studio Template Repository 的子目录中，例如：
+
+```text
+ai-studio-template/
+└── ai-studio-demo/   # 独立 Git Repository
+```
+
+父目录继续用于角色职责、组织流程、Schema、模板等 Studio Layer 工作；子目录只用于该小游戏的 Project Layer 工作。父仓库必须通过本地 Git exclude 忽略游戏子仓库，避免误提交。目录嵌套仅是本地工作区组织方式，不改变两个仓库独立的 `origin`、commit history 和发布边界。
+
 ## 默认 QA 范围
 标准小游戏模板默认：
 - 正式 Client 执行测试只跑 Web；微信/抖音平台实机测试需显式要求。
