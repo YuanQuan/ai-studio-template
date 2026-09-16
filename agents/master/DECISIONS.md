@@ -10,3 +10,4 @@
 - 多游戏采用“Studio Template Repository + 独立 Game Repository + `.studio-lock.json` 版本锁定”的模型。组织职责、流程和治理变更发布到 `YuanQuan/ai-studio-template`；具体项目内容只进入对应游戏仓库。模板更新不自动影响已有游戏，需显式 Sync Review 后应用。
 - 新建小游戏项目默认使用 `templates/game/` 的 `standard-mini-game` 模板：Web 开发/调试、微信/抖音小游戏发布，默认 Cocos Creator + TypeScript / NestJS + TypeScript / ws / Protobuf / MySQL + Redis / Monorepo；具体游戏可通过自己的 Project Decision 覆盖。
 - 本地工作区允许采用“Studio 父仓库 + Game 子目录独立仓库”的布局；父目录只处理 Studio Layer，具体开发与跨角色 Project Artifact 只写入对应 Game Repository 子目录，Git history/origin 必须保持独立。
+- 所有项目默认禁止 Agent 自行产生 Git 动作。文件修改后只保持工作区状态；只有用户明确下达具体 Git 指令时，Master 才能在该次授权范围内执行对应 init/add/commit/pull/fetch/push/branch/merge/rebase/reset/tag 或等价 GitHub 远程写操作。一次授权不得被解释为长期授权，“commit”不自动包含“push”。

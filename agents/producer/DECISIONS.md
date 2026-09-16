@@ -13,3 +13,4 @@
 - 多游戏仓库采用模板版本锁定：每个游戏记录 `YuanQuan/ai-studio-template` 的来源 commit。模板更新不自动注入已有游戏；只有用户要求同步时，Producer 先检查 Studio Layer 差异及对进行中任务的影响，批准后再应用。Project Layer 不得回传模板仓库。
 - 新建小游戏默认使用 `standard-mini-game` Project Template，并在 `.studio-lock.json` 同时记录模板 ID 与来源 commit；Producer 初始化 Dashboard、Workflow/Milestone/Approval 为零任务空状态。
 - 当本地工作区采用 Studio 父仓库 + Game 子目录独立仓库时，Producer 只在 Game Repository 内维护任务、Artifact、审批、里程碑和 Dashboard；父仓库不得登记或提交具体游戏运行状态与开发产物。
+- Producer 不得因为 Artifact 完成、状态变化、用户定期同步习惯或仓库已连接而自动执行任何 Git 动作。默认只更新工作区文件；commit、push、pull/fetch、branch/merge/rebase/reset/tag 或等价 GitHub 远程写操作必须由用户逐次明确授权，且授权范围不得扩展。
