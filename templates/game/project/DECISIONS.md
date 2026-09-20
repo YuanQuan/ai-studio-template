@@ -1,18 +1,17 @@
-# Project Decisions
+# 项目决策记录
 
-This log is intentionally empty for every new mini-game project.
+本文件只记录当前 Game Repository 的项目级决策，不得复制其他游戏的决策历史。
 
-Only decisions specific to this Game Repository belong here. Do not copy decision history from another game.
+## 条目格式
+- Decision ID：
+- 日期：
+- 状态：`PROPOSED` / `ACCEPTED` / `SUPERSEDED`
+- 范围：
+- 决策：
+- 理由：
+- 受影响 Artifact / 角色：
+- 迁移 / 回滚说明：
 
-## Entry Format
-- Decision ID:
-- Date:
-- Status: PROPOSED / ACCEPTED / SUPERSEDED
-- Scope:
-- Decision:
-- Rationale:
-- Affected Artifacts / Roles:
-- Migration / Rollback Notes:
+## 决策
 
-## Decisions
-None yet.
+当前暂无项目级决策。

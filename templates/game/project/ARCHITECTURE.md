@@ -30,7 +30,9 @@ tooling/             # build/generation/validation/test tools
 Do not create giant catch-all `common` / `utils` packages. Extract shared code after real repeated use appears.
 
 ## Client
-- Cocos Creator + TypeScript.
+- Cocos Creator 3.8.8 + TypeScript.
+- New games created from this template pin Creator to `3.8.8` by default; upgrades require an explicit per-game architecture decision and compatibility review.
+- Use the Creator 3.8.8 built-in engine by default. Only projects that truly need engine customization should use the matching official `cocos/cocos-engine` tag `3.8.8` as a custom engine.
 - Core gameplay/business logic must not directly scatter `wx.*` / `tt.*` calls.
 - Platform capabilities are isolated through WebAdapter / WeChatAdapter / DouyinAdapter or equivalent explicit adapter contracts.
 - UI, VFX, resource management, input, animation and lifecycle remain clearly separated from business state.

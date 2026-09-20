@@ -10,7 +10,8 @@ platforms:
     - douyin_mini_game
 
 default_stack:
-  client: Cocos Creator + TypeScript
+  client: Cocos Creator 3.8.8 + TypeScript
+  cocos_creator_version: 3.8.8
   server: Node.js + NestJS + TypeScript
   server_architecture: modular_monolith
   websocket: ws
@@ -59,6 +60,7 @@ create_directories:
   - packages/server-core
   - packages/platform-sdk
   - tooling
+  - tooling/cocos
 
 initialize_empty_state:
   - project/DECISIONS.md
