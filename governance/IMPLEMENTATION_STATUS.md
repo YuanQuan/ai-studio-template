@@ -1,6 +1,26 @@
 # 工作流 v2 实施与恢复记录
 
-状态：PARTIAL_BLOCKED。用户已批准实施；尚未完整落地，不是等待用户重复确认。最后记录日期：2026-09-24。
+状态：TEMPLATE_ONLY_PARTIAL_BLOCKED。最后记录日期：2026-09-24。
+
+## 当前轮次范围与结果
+
+用户最新限定：只修改 `ai-studio-demo/` 之外的主模板和 `templates/game/`；不修改任何当前游戏文件，不执行 Git。本轮没有读取或写入 ai-studio-demo/ 内文件，没有修改任何 Git 状态。当前游戏先前的差异仍未处理，不属于本轮同步范围。
+
+本轮正常 write/edit 返回成功：
+- 新建 governance/CONTINUOUS_IMPROVEMENT_POLICY.md，并用 read 回查：规定 CI-001 的范围、保护边界、验证、回退及模板回流。
+- 新建 governance/WORKFLOW_VERSION.json：规则文本与旧 Schema 兼容；自动恢复命令、后台执行器、原子锁、看板生成器和 Schema v2 均明确未实现。
+- 更新 rules/session_protocol.md：去除不存在的 resume 命令依赖；明确文件恢复、旧 Schema 兼容、单写者和目录排除。
+- 更新 rules/qa_protocol.md：去除不存在的 schemas/v2/test_report.schema.json 依赖，保留两阶段 QA 及审批边界。
+- 更新 governance/capability_change_protocol.md：增加 CI-001 规则引用和 Markdown 兼容过渡；不伪造用户批准。
+- 更新 governance/REPOSITORY_SYNC_POLICY.md：补充已验证通用方法回流与显式目录排除优先规则。
+- 更新本实施记录。
+
+随后，正常 edit 修改主模板 agents/qa/CAPABILITIES.md 被拒绝，工具原文：因 OpenAI 无法确定请求的安全状态，已拦截此工具调用。该修改未应用。没有重试同一编辑，没有改工具或路径绕过拒绝。
+
+结论：主模板可完成部分写入，但排除 ai-studio-demo/ 不能保证所有写入成功。顶层 AGENTS.md 尚未接入，QA 其余旧约定、STUDIO、清单与标准模板尚未对齐；本轮停止集成，不标记整套规则启用。旧审批和 Git 边界继续有效。
+
+本轮仅进行文件检查和上述正常编辑；没有运行最终一致性校验、游戏测试、性能测试、真机、多平台或弱网测试。无独立 Agent 评审或自动化完成结论。以下保留前一轮历史，仅供恢复追溯。
+
 
 ## 本轮真实完成
 

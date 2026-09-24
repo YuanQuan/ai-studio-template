@@ -92,7 +92,7 @@ ai-studio-template/              # Studio Template Repository
 
 ## 4. 已有游戏同步 Studio 更新
 
-模板职责/流程发生变化后，不自动推入所有游戏仓库。
+模板职责/流程发生变化后，不自动推入所有游戏仓库。用户明确限定“只改模板”、排除某个目录或仅允许部分文件时，该限制优先于本文件的默认双同步；不得通过嵌套路径、脚本、链接或全目录复制间接改写被排除的游戏。
 
 ### 4.1 当前游戏中的组织级规则变更：默认双同步
 
@@ -120,6 +120,16 @@ ai-studio-template/              # Studio Template Repository
 5. 应用后更新 Studio Layer 文件与 `.studio-lock.json`。
 6. Project Layer 永远不因 Studio Sync 被自动覆盖。
 
+### 4.3 已验证通用方法的回流
+
+依据 `governance/CONTINUOUS_IMPROVEMENT_POLICY.md`（CI-001），A/B 类内部改进可以在既有授权范围内主动完成记录、评审和验证，不需用户重复提醒。经验性改进先在当前项目试验；确定的规则矛盾可以直接修正并验证。回流前必须去除具体游戏玩法、数值、素材、代码和私有历史，只提炼通用职责、交接、检查或方法。
+
+模板维护使用 `governance/capability_changes/<ID>.md`，项目试验使用 `project/improvements/<ID>.md`。记录授权依据、证据、范围、评审、实际验证和回退方式；不得把 STANDING_POLICY 当成新的 USER_APPROVED。涉及 CI-001 的 C 类事项仍需用户明确决定。
+
+只对本轮授权的仓库进行文件级应用；其他游戏保持 pinned。目标仓库不可访问或被排除时标记 PENDING_TEMPLATE_SYNC / PENDING_PROJECT_SYNC，而不是报告双同步完成。运行中的任务先固定其规则，在安全交接点通过差异计划迁移。
+
+本地应用、已验证、已提交和已推送分别记录。没有真实新 commit 时保留 .studio-lock.json；不得用规则文本版本或文件摘要冒充 Git 提交。所有 Git 操作仍受第 8 节逐次授权限制。
+
 ## 5. 项目例外与覆盖
 
 若某一游戏需要不同于 Studio 默认职责/流程的特殊规则，用户应明确说明该变更“仅当前项目”；此时记录在该游戏自己的项目决策中，不回写模板仓库。
@@ -132,7 +142,7 @@ ai-studio-template/              # Studio Template Repository
 3. 当前 Task。
 4. 当前游戏已锁定的 Studio Layer 快照。
 
-如果需要把某个项目中验证有效的做法推广给所有未来游戏，先明确它已经从“项目经验”升级为“组织级规则”，再修改 `ai-studio-template`。
+如果需要把项目经验推广为组织方法，按第 4.3 节验证、评审和分级授权；不得仅凭一次主观总结直接改变所有游戏。新的产品、技术或视觉决定不因方法回流自动成为通用默认值。
 
 ## 6. 发布边界
 

@@ -1,6 +1,6 @@
 # 两阶段 QA 协议
 
-目标规则版本：`studio-workflow-v2`。集成状态：`PARTIAL_NOT_RELEASED`。相关规则、模板与 Schema 尚未完成一致性接入，详见 `governance/IMPLEMENTATION_STATUS.md`；不能声称新工作流已经完整启用。
+规则文本版本：`studio-workflow-v2-policy`。实施状态见 `governance/IMPLEMENTATION_STATUS.md`；JSON 继续兼容现有 schemas/。本文是测试组织规则，不代表游戏已执行任何测试，也不代表自动测试工具已经部署。
 
 以下为已保存的两阶段 QA 设计。产品审批、P0/P1/P2 定义与 Git 权限不因此改变。
 
@@ -47,12 +47,12 @@
 
 - FUNCTIONAL：Client/Server 用例按适用范围维护；功能、视觉和性能结果分别展示。整体 PASS 必须具有必要的实际验证证据。
 - RELEASE：额外提供候选版本和平台/真机/弱网矩阵；平台未测或关键项阻塞不能汇总成通过。
-- 结构化摘要使用 `schemas/v2/test_report.schema.json`；正式文字报告与证据通过路径关联。
+- 兼容过渡期使用现有 Task / Deliverable / Review / Approval Schema。将 test_phase、规则文本版本、target_ref、environment_ref 写入 TEST_PLAN / TEST_REPORT 明确字段，并在 Task.notes 中引用；不要添加旧 Schema 不接受的顶层字段。schemas/v2 尚未实现，不要求调用不存在的校验器。正式报告与证据通过路径关联。
 - P0/P1 必须关闭；P2 可延期但须记录。不得为了通过而删用例、改期望、放宽阈值或隐藏未测项。
 - 正式游戏产物仍按原有用户审批门禁执行；QA 阶段变化不授权绕过实施报告审批或代替用户最终验收。
 
 ## 5. 旧项目迁移
 
-已有已批准测试计划和历史结果保持不变，不回填新测试为 PASS。新任务使用 v2；在执行任务固定旧规则，下一安全交接点建立差异补充计划后切换，不改写原审批记录。补充计划仍遵守游戏产物审批；性能预算不明时由 Tech Lead/QA 提出并落盘。
+已有已批准测试计划和历史结果保持不变，不回填新测试为 PASS。新任务使用本规则文本且保持现有 JSON 格式；在执行任务固定旧规则，下一安全交接点建立差异补充计划后切换，不改写原审批记录。补充计划仍遵守游戏产物审批；性能预算不明时由 Tech Lead/QA 提出并落盘。用户只授权修改模板时，本条不自动迁移任何游戏。
 
 既有功能 DONE 不被悄悄撤销；发布时不能把旧功能验收当作新上线结论。迁移状态、下一动作和未测项必须出现在会话恢复索引与 Dashboard。
