@@ -35,3 +35,6 @@ profiles/
 # Misc caches
 .cache/
 .tmp/
+
+# Independent game project (Project Layer must stay out of this template repository)
+/ai-studio-001/
