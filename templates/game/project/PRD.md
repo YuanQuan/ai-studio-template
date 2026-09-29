@@ -1,13 +1,16 @@
-# Product Requirements
+# 产品需求索引
 
-## Status
-No approved game requirements yet.
+## 当前状态
 
-A new mini-game starts with Product Agent creating a product outline/module tree, then separate feature PRDs. Do not place another game's requirements in this template.
+尚无获批游戏需求。
 
-## Product Outline Reference
-TBD — create from `agents/product/PRODUCT_OUTLINE_TEMPLATE.md`.
+新小游戏先由 Product 用简洁脑图和短说明组织头脑风暴，说明核心循环、稳定模块编号、边界、已确认方向、假设和待决问题。方向经讨论收敛后，再展开模块树和各功能 PRD。脑图与说明作为同版 Artifact 接受专业评审和用户审批；需要脑图时优先使用 MindMap AI，并在项目内保留可编辑文字源与提交快照。不得写入其他游戏的具体需求。
 
-## Approved Feature PRD Index
-| Module | Feature | Artifact Path | Version | User Approval | Dependencies |
+## 产品总纲入口
+
+待建立：参考 `agents/product/PRODUCT_OUTLINE_TEMPLATE.md`。
+
+## 已批准功能 PRD 索引
+
+| 模块 | 功能 | Artifact 路径 | 版本 | 用户审批 | 依赖 |
 |---|---|---|---|---|---|

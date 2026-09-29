@@ -3,9 +3,9 @@
 Human-maintained source tables use `.xlsx` under `source/`. Data dictionaries/validation contracts live under `schema/`.
 
 ## Ownership
-- Product owns gameplay semantics, balancing goals and actual numeric content.
-- Tech Lead owns public config structure, field types, IDs/references, constraints, validation and generation/runtime rules.
-- Client/Server consume generated/validated outputs; they do not invent independent config semantics.
+- Product owns the business structure of public configuration: table catalog, field meaning, tunable parameters, business IDs and relationships, balancing goals, numeric content, source workbooks and data dictionaries.
+- Tech Lead reviews field types, stable IDs/reference integrity, executable constraints, Client/Server visibility and compatibility, and owns generation and technical validation rules. Tech Lead does not change product meaning unilaterally.
+- Client/Server consume approved, validated outputs; they do not invent independent config semantics.
 
 ## Per-Table Data Dictionary
 For each table document:
