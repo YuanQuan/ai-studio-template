@@ -11,6 +11,9 @@ None yet.
 ## Components
 None yet.
 
+## 视觉基线与资源复用（模板默认项）
+登记引用的已批准 Art 视觉基线、组件/图标/状态资源的统一 ID 和复用范围。需要新造型、配色或材质变体时写明原因与影响，先交 Art 视觉 Review；页面布局与交互仍由 UI 负责。
+
 ## Interaction Rules
 None yet.
 
