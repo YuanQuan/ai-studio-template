@@ -4,6 +4,7 @@
 - Task ID:
 - Approved PRD / Acceptance version:
 - Approved Art / UI / VFX artifacts (if applicable):
+- 视觉资源制作前方案及切图效果的两次用户审批版本（如适用）：
 - 视觉锚点版本及代表视窗/状态（如适用）：
 - Tech Design / Client / Server Feature Brief references:
 
@@ -40,6 +41,8 @@ Unless explicitly requested by the user/task:
 Use approved Art/UI/VFX artifacts as the baseline. UI uses fixed Web viewport/DPR/test data/screenshots. VFX uses fixed camera/background/trigger conditions plus key frames/short recordings where applicable. Automated/visual diff helps detect change; final visual acceptance remains based on approved artifacts and professional Art/UI/VFX review.
 
 视觉资源逐项列出已批准锚点，在固定视窗和状态下留图或视频。功能、视觉、适用性能分别报告 `PASS/FAIL/NOT_TESTED`。`FUNCTIONAL` 默认使用已批准的 Web/测试环境；`RELEASE` 覆盖声明的设备与平台。单元任务若提前要求目标机检验，须在获批计划中写明设备、环境与阈值；没有证据不得填 `PASS`。
+
+Client 实际接入的切片 ID/版本须与用户第二次批准的效果版本一致；未批准的切片只可隔离技术验证，不作为正式功能或视觉通过证据。
 
 ## Explicit Exclusions / Risks
 - 
