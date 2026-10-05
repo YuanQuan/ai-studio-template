@@ -66,6 +66,7 @@ initialize_empty_state:
   - project/DECISIONS.md
   - project/WORKFLOW_STATUS.md
   - project/MILESTONE_LOG.md
+  - project/WORK_RETROSPECTIVE_LOG.md
   - project/APPROVAL_LOG.md
   - project/dashboard/index.html
 
