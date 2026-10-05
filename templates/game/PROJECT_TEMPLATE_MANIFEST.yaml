@@ -68,6 +68,7 @@ initialize_empty_state:
   - project/MILESTONE_LOG.md
   - project/WORK_RETROSPECTIVE_LOG.md
   - project/APPROVAL_LOG.md
+  - project/ASSET_HANDOFF_REGISTRY.md
   - project/dashboard/index.html
 
 never_inherit_from_another_game:
