@@ -93,3 +93,10 @@ qa_defaults:
     - P1
   carry_allowed:
     - P2
+
+cocos_workflow:
+  development: version_compatible_scripts_and_creator_cli_first
+  web_validation: codex_in_app_browser_over_local_http_first
+  shared_skill: agents/shared/skills/cocos-cli-browser/SKILL.md
+  rule: rules/cocos_cli_browser_workflow.md
+  preserve_editor_platform_checks_and_artifact_gates: true
