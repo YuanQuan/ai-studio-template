@@ -15,6 +15,7 @@
 - Authority Model: critical business state and trusted results are server-authoritative
 - Workflow Mode: APPROVAL
 - Producer: workflow/status/artifact version/user approval source of truth
+- Model Allocation: art asset production gpt-6-sol/high; coding gpt-6-luna/low; all other tasks gpt-6-sol/low.
 
 ## Platform Architecture
 Core business code must not scatter direct platform API calls. Platform-specific capabilities are isolated behind adapters such as:
@@ -31,6 +32,7 @@ Local Web should reproduce gameplay/business behavior/effects as fully as techni
 - Cross-zone database joins are not a default integration mechanism.
 
 ## QA Defaults
+- Unit-example work does not assign QA Agent or QA Tasks. The example owner records reproducible checks; formal features re-enter applicable QA gates.
 - Default formal client execution target: Web only.
 - WeChat/Douyin device/platform testing is not included unless the Task/user explicitly requests it.
 - Network/weak-network/reconnect testing is not included unless explicitly requested.
