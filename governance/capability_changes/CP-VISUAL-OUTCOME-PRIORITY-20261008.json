@@ -1,0 +1,23 @@
+{
+  "id": "CP-VISUAL-OUTCOME-PRIORITY-20261008",
+  "agent": "art",
+  "change_type": "CROSS_AGENT_CONTRACT",
+  "summary": "以已确认效果与真实显示一致为美术生产首要目标，局部修图不足时Art可选择有据重绘。",
+  "reason": "用户明确授权视觉效果优先与必要时重绘，修订旧的仅允许局部改图约束。",
+  "impact": [
+    "保留来源、旧版、多层PSD及同背景同尺度对照。",
+    "继续执行既有制作方案Gate1、首图前同批预签、具体切片Gate2与接入后实际运行验证。",
+    "主Studio Layer与标准模板默认项同步；其他既有游戏保持pinned。"
+  ],
+  "affected_agents": [
+    "master",
+    "producer",
+    "art",
+    "tech_lead",
+    "client",
+    "qa"
+  ],
+  "user_approval": "APPROVED",
+  "master_sync_required": true,
+  "status": "APPLIED"
+}

@@ -69,3 +69,7 @@ Local Web should reproduce gameplay/business behavior/effects as fully as techni
 ## Cocos CLI 与内置浏览器优先
 
 Cocos项目优先版本相容脚本/API与Creator CLI开发与构建，再用本地HTTP实际Web产物、Codex内置浏览器验证；按 `rules/cocos_cli_browser_workflow.md` 与共享 `agents/shared/skills/cocos-cli-browser/SKILL.md` 保留必要Editor/平台检查、资源身份及审批门禁。
+
+## 视觉效果优先（模板默认项）
+
+美术生产以已确认效果与真实显示一致为首要目标。局部修订不能达到目标时可由 Art 选择有据重绘，保留来源、旧版和同尺度对照；沿用既有制作方案与实际切片两次用户审批及接入后实际运行验证，遵守 rules/visual_production_contract.md。
