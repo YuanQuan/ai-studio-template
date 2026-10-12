@@ -37,6 +37,7 @@ create_directories:
   - project/art_reference/misc
   - project/config/source
   - project/config/schema
+  - project/config/archive
   - tasks/backlog
   - tasks/active
   - tasks/review
@@ -108,3 +109,12 @@ visual_fidelity_contract:
   rule: rules/visual_fidelity_compute_contract.md
   packet_template: agents/art/VISUAL_FIDELITY_PACKET_TEMPLATE.md
   preserve_existing_artifact_and_qa_gates: true
+
+config_resource_contract:
+  rule: rules/config_resource_contract.md
+  field_guide: project/config/FIELD_GUIDE.md
+  resource_index: project/config/RESOURCE_INDEX.json
+  active_filenames: stable_without_version_suffix
+  history_directory: project/config/archive
+  dashboard_links: all_current_formal_resources_and_chinese_field_guide
+  preserve_existing_approval_and_validation_gates: true
