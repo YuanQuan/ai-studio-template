@@ -1,5 +1,7 @@
 # Artifact Contract
 
+效果继承与制作预算的记录模板见 `agents/art/VISUAL_FIDELITY_PACKET_TEMPLATE.md`，规则见 `rules/visual_fidelity_compute_contract.md`；v0.1 已于 2026-10-12 获用户批准并启用。记录并入既有制作方案，不新增重复事实源或独立审批门禁，也不替代具体资源批准。
+
 本项目的多 Agent 协作必须以固定产物为主要沟通媒介。聊天用于讨论、澄清和评审；长期有效事实、正式输入和验收证据必须落到文件/资产中。
 
 ## 1. 基本规则

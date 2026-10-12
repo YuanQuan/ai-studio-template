@@ -100,3 +100,11 @@ cocos_workflow:
   shared_skill: agents/shared/skills/cocos-cli-browser/SKILL.md
   rule: rules/cocos_cli_browser_workflow.md
   preserve_editor_platform_checks_and_artifact_gates: true
+
+visual_fidelity_contract:
+  version: v0.1
+  status: user_approved
+  active: true
+  rule: rules/visual_fidelity_compute_contract.md
+  packet_template: agents/art/VISUAL_FIDELITY_PACKET_TEMPLATE.md
+  preserve_existing_artifact_and_qa_gates: true

@@ -1,5 +1,9 @@
 # Art Guide
 
+## 效果继承与算力控制（模板默认）
+
+已批准规范 `rules/visual_fidelity_compute_contract.md` 与 `agents/art/VISUAL_FIDELITY_PACKET_TEMPLATE.md` v0.1 提供冻结效果、真正语义分层、局部修订、序列帧/骨骼动画、预算账本与失败停止方法。新制作把所需记录并入既有方案，按原 Gate1/Gate2 和适用 QA 执行；保持新项目视觉基线及实际资源为空，规则批准不代替资源批准。
+
 ## Status
 No project Art Direction has been approved yet.
 

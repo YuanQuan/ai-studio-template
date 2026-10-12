@@ -1,5 +1,7 @@
 # Asset Manifest
 
+已批准默认规则：`rules/visual_fidelity_compute_contract.md` v0.1。资产记录引用冻结图/母版/真实语义层、受影响导出与动画源、同尺度重组/差异/回放及制作预算账本；不复制内容形成第二事实源，不将规则批准视为某个资源已批。当前模板仍无实际图、动画、预算执行或资源批准记录。
+
 No project assets are registered yet.
 
 | Asset ID | Name | Type | Pre-production User Approval | Approved Visual Baseline | Editable Source / Export | Slicing Plan / Recomposition | Art Visual Review | Tech Production Review | Sliced Effect User Approval | Status | Usage / Notes |
